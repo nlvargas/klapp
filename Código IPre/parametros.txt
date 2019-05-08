@@ -1,0 +1,16 @@
+q_min	4
+q_max	6
+part_min	0
+part_max	6
+publ_min	0
+publ_max	1
+m_min	3
+m_max	4
+h_min	2
+h_max	3
+region_min	0
+region_max  1
+TI_min  2
+TI_max  3
+cant_gtd  5
+cant_grupos 13

@@ -1,0 +1,66 @@
+{% extends 'groups/layout.html' %}
+
+{% block content %}
+
+
+    <div class="red lighten-3">
+        <h5> Información general </h5>
+        <h7> Cantidad de grupos a armar </h7> <input type="number" id="groups_number">
+        <h7> Numero minimo de alumnos por grupo </h7> <input type="number" id="lower_number">
+        <h7> Numero maximo de alumnos por grupo </h7> <input type="number" id="upper_number">
+        <h7> Cantidad de preferencias por alumno </h7> <input type="number" id="students_preferences_number">
+    </div>
+
+
+
+    <div class="red lighten-3">
+        <h5> Atributos a considerar</h5>
+        <ul id="attributes"></ul>
+        <div style="overflow: hidden; padding-right: .3em;">
+        <input type="text" id="attribute_name" >
+        </div>
+        <button type="button" id="add_attribute"> Agregar atributo </button>
+    </div>
+
+
+        <div class="red lighten-3">
+    <h5> Preferencias </h5>
+    <ul id="preferences"></ul>
+    <h7> Nombre </h7> <input type="text" id="preference_name">
+    <h7> Minima cantidad de grupos con esta preferencia </h7> <input type="number" id="preference_min">
+    <h7> Maxima cantidad de grupos con esta preferencia </h7> <input type="number" id="preference_max">
+    <button type="button" id="add_preference"> Agregar preferencia </button>
+        </div>
+
+
+        <div class="red lighten-3">
+    <h5> Agregar divisiones (opcional) </h5>
+    <ul id="divisions"></ul>
+    <h7> Nombre </h7> <input type="text" id="division_name">
+    <h7> Capacidad </h7> <input type="number" id="division_capacity">
+    <button type="button" id="add_division"> Agregar division </button>
+        </div>
+
+
+    <button type="button" id="generate_template"> Generar template </button>
+
+
+
+<h5 class="center align red lighten-3"><a href="/download_template.html" id="template_link"> </a></h5>
+
+
+
+<form class="red lighten-3" style="display:none;" enctype="multipart/form-data" method="post" id="upload">
+    <h5> Subir template </h5>
+    {% csrf_token %}
+    <input type="file" id="file" name="file"/>
+    <button type="button" id="upload_template"> Subir planilla </button>
+</form>
+
+<button type="button" style="display:none;" id="create_groups"> Generar grupos </button>
+
+
+<h5 class="center align red lighten-3"><a href="/download.html" id="results"> </a></h5>
+
+
+{% endblock %}

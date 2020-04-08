@@ -1,9 +1,0 @@
-{% extends 'groups/layout.html' %}
-
-{% block content %}
-<form enctype="multipart/form-data" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Enviar</button>
-</form>
-{% endblock %}

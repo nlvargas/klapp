@@ -1,5 +1,0 @@
-cluster1  agr
-cluster2  ayc
-cluster3  ces
-cluster4  ing
-cluster5  college
